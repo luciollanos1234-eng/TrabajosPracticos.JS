@@ -6,7 +6,7 @@ if (edad >= 18) {
     alert("no tiene la edad suficiente para conducir");
 } */
 
-let nota = parseInt(prompt("ingrese su calificacion (0-10)"));
+/* let nota = parseInt(prompt("ingrese su calificacion (0-10)"));
 
 switch (true) {
     case nota > 10 || nota < 0:
@@ -32,4 +32,23 @@ switch (true) {
   default:
     alert("ingrese un numero valido")
     break;
+} */
+
+let cadenas = [];
+let entrada;
+
+do {
+  entrada = prompt("introduce una cadena de texto");
+
+  if (entrada !== null) {
+    cadenas.push(entrada);
+  }
+} while (entrada !== null && confirm("¿desea introducir otra cadena?"));
+
+const resultado = cadenas.join("--");
+
+if (resultado) {
+  alert("resultado:\n" + resultado);
+} else {
+  alert("no se introdujo ninguna cadena.");
 }

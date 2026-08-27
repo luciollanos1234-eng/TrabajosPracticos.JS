@@ -53,7 +53,6 @@ if (resultado) {
   alert("no se introdujo ninguna cadena.");
 } */
 
-
 /* let numero;
 let entrada;
 let sumaTotal = 0;
@@ -72,3 +71,37 @@ do {
 
  alert("la suma total de los numeros introducidos es:"); */
 
+const letras = "T-R-W-A-G-M-Y-F-P-D-X-B-N-J-Z-S-Q-V-H-L-C-K-E";
+
+while (true) {
+  // Pedir número de DNI al usuario
+  let entrada = prompt("Introduce el número de DNI (sin letra):");
+
+  // Si pulsa CANCELAR → terminamos el programa
+  if (entrada === null) {
+    break;
+  }
+
+  // Convertir a número entero
+  let numeroDNI = parseInt(entrada, 10);
+
+  // ✅ Validaciones
+  if (isNaN(numeroDNI)) {
+    alert("⚠️ Lo introducido NO es un número válido. Inténtalo de nuevo.");
+    continue; // Volvemos a pedir
+  }
+
+  if (numeroDNI < 0 || numeroDNI > 99999999) {
+    alert("⚠️ El número debe estar entre 0 y 99999999. Inténtalo de nuevo.");
+    continue;
+  }
+
+  // ✅ Calcular resto de la división entre el número y 23
+  let resto = numeroDNI % 23;
+
+  // ✅ Obtener la letra correspondiente
+  let letra = letras.charAt(resto);
+
+  // ✅ Mostrar resultado
+  alert(`✅ DNI completo: ${numeroDNI} ${letra}`);
+}

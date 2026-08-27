@@ -34,7 +34,7 @@ switch (true) {
     break;
 } */
 
-let cadenas = [];
+/* let cadenas = [];
 let entrada;
 
 do {
@@ -51,4 +51,24 @@ if (resultado) {
   alert("resultado:\n" + resultado);
 } else {
   alert("no se introdujo ninguna cadena.");
-}
+} */
+
+
+/* let numero;
+let entrada;
+let sumaTotal = 0;
+
+do {
+  entrada = prompt("introduce un numero");
+
+  if (entrada !== null) {
+    numero = parseFloat(entrada);
+  } else if (isNaN(numero)) {
+    alert("no es un numero valido, intentalo de nuevo.");
+  } else {
+    sumaTotal += numero;
+  }
+} while (entrada !== null && confirm("¿desea introducir otra numero?"));
+
+ alert("la suma total de los numeros introducidos es:"); */
+

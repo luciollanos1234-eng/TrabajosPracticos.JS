@@ -142,7 +142,7 @@ if (isNaN(numeroUsuario) || numeroUsuario < 1 || numeroUsuario > 50) {
   //ejercicio 9
 
   // Recorremos los números del 1 al 500
-for (let numero = 1; numero <= 500; numero++) {
+/* for (let numero = 1; numero <= 500; numero++) {
   let mensaje = numero;
 
   // Verificamos si es múltiplo de 4 y/o de 9
@@ -164,4 +164,33 @@ for (let numero = 1; numero <= 500; numero++) {
   if (numero % 5 === 0) {
     console.log("——————————————————————————————");
   }
+} */
+
+  //ejercicio 10
+
+  // Pedimos los datos al usuario
+let filas = parseInt(prompt("Ingresa el número de FILAS:"));
+let columnas = parseInt(prompt("Ingresa el número de COLUMNAS:"));
+
+// Validación básica
+if (isNaN(filas) || isNaN(columnas) || filas <= 0 || columnas <= 0) {
+  alert("⚠️ Debes ingresar números positivos mayores a cero.");
+} else {
+  // Calculamos el número mayor (total de celdas)
+  let totalCeldas = filas * columnas;
+  let numero = totalCeldas; // Empezamos desde el mayor
+
+  // Creamos la tabla
+  document.write("<table border='1' cellpadding='8' cellspacing='0'>");
+
+  for (let f = 1; f <= filas; f++) {
+    document.write("<tr>"); // Iniciamos fila
+    for (let c = 1; c <= columnas; c++) {
+      document.write("<td>" + numero + "</td>");
+      numero--; // Disminuimos el número en cada celda
+    }
+    document.write("</tr>"); // Cerramos fila
+  }
+
+  document.write("</table>");
 }

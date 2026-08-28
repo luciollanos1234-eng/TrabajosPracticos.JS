@@ -239,7 +239,7 @@ document.write("<h3>Número aleatorio entre 1 y 99: " + numeroAleatorio + "</h3>
 //ejercicio 13
 
 // Pedimos el texto al usuario
-let texto = prompt("Ingresa un texto cualquiera:");
+/* let texto = prompt("Ingresa un texto cualquiera:");
 
 // Verificamos que no esté vacío
 if (texto === null || texto.trim() === "") {
@@ -252,4 +252,31 @@ if (texto === null || texto.trim() === "") {
   alert("Texto en mayúsculas:\n" + textoMayusculas);
   document.write("<h3>Texto en mayúsculas:</h3>");
   document.write("<p style='font-size:18px; color:blue;'>" + textoMayusculas + "</p>");
+} */
+
+  //ejercicio 14
+
+  // Pedimos la cadena de texto al usuario
+let cadena = prompt("Ingresa un texto:");
+
+// Validación: que no esté vacío
+if (!cadena || cadena.trim() === "") {
+  alert("⚠️ No ingresaste ningún texto.");
+} else {
+  let resultado = "";
+
+  // Recorremos cada carácter de la cadena
+  for (let i = 0; i < cadena.length; i++) {
+    resultado += cadena[i]; // Agregamos el carácter
+
+    // Si NO es el último carácter, agregamos el guion
+    if (i !== cadena.length - 1) {
+      resultado += "-";
+    }
+  }
+
+  // Mostramos el resultado
+  alert("Resultado:\n" + resultado);
+  document.write("<h3>Resultado:</h3>");
+  document.write("<p style='font-size:18px;'>" + resultado + "</p>");
 }

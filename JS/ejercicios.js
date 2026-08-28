@@ -71,7 +71,7 @@ do {
 
  alert("la suma total de los numeros introducidos es:"); */
 
-const letras = "T-R-W-A-G-M-Y-F-P-D-X-B-N-J-Z-S-Q-V-H-L-C-K-E";
+/* const letras = "T-R-W-A-G-M-Y-F-P-D-X-B-N-J-Z-S-Q-V-H-L-C-K-E";
 
 while (true) {
   // Pedir número de DNI al usuario
@@ -104,4 +104,14 @@ while (true) {
 
   // ✅ Mostrar resultado
   alert(`✅ DNI completo: ${numeroDNI} ${letra}`);
-}
+} */
+
+  const pantalla = document.getElementById("pantalla");
+
+  let contador = 1
+  
+
+  while (contador <= 30) {
+    pantalla.innerHTML += `<p>${contador}</p>`
+    contador ++
+  }

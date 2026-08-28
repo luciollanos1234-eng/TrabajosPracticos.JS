@@ -106,7 +106,7 @@ while (true) {
   alert(`✅ DNI completo: ${numeroDNI} ${letra}`);
 } */
 
-  const pantalla = document.getElementById("pantalla");
+/* const pantalla = document.getElementById("pantalla");
 
   let contador = 1
   
@@ -114,4 +114,27 @@ while (true) {
   while (contador <= 30) {
     pantalla.innerHTML += `<p>${contador}</p>`
     contador ++
+  } */
+
+//ejercicio 7
+
+//ejercicio 8
+
+// Pedimos al usuario que ingrese un número
+let numeroUsuario = prompt("Ingresa un número (máximo 50):");
+numeroUsuario = parseInt(numeroUsuario);
+
+// Validación: número entre 1 y 50
+if (isNaN(numeroUsuario) || numeroUsuario < 1 || numeroUsuario > 50) {
+  alert("⚠️ Por favor, ingresa un número VÁLIDO entre 1 y 50.");
+} else {
+  // Generamos la pirámide
+  for (let fila = 1; fila <= numeroUsuario; fila++) {
+    let linea = "";
+    for (let digito = 1; digito <= fila; digito++) {
+      linea += digito; // Concatenamos los números SIN espacios
+    }
+    console.log(linea); // Muestra en consola
+    document.write(linea + "<br>"); // Muestra en página web
   }
+}

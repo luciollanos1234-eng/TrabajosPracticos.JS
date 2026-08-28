@@ -139,9 +139,9 @@ if (isNaN(numeroUsuario) || numeroUsuario < 1 || numeroUsuario > 50) {
   }
 } */
 
-  //ejercicio 9
+//ejercicio 9
 
-  // Recorremos los números del 1 al 500
+// Recorremos los números del 1 al 500
 /* for (let numero = 1; numero <= 500; numero++) {
   let mensaje = numero;
 
@@ -166,10 +166,10 @@ if (isNaN(numeroUsuario) || numeroUsuario < 1 || numeroUsuario > 50) {
   }
 } */
 
-  //ejercicio 10
+//ejercicio 10
 
-  // Pedimos los datos al usuario
-let filas = parseInt(prompt("Ingresa el número de FILAS:"));
+// Pedimos los datos al usuario
+/* let filas = parseInt(prompt("Ingresa el número de FILAS:"));
 let columnas = parseInt(prompt("Ingresa el número de COLUMNAS:"));
 
 // Validación básica
@@ -193,4 +193,35 @@ if (isNaN(filas) || isNaN(columnas) || filas <= 0 || columnas <= 0) {
   }
 
   document.write("</table>");
-}
+} */
+
+//ejercicio 11
+
+/* let nombre1 = prompt("ingresa el Nombre de la persona 1:");
+let edad1 = parseInt(prompt("ingresa la Edad de " + nombre1 + ":"));
+
+let nombre2 = prompt("ingresa el Nombre de la persona 2:");
+let edad2 = parseInt(prompt("ingresa la Edad de " + nombre2 + ":"));
+
+let nombre3 = prompt("ingresa el Nombre de la persona 3:");
+let edad3 = parseInt(prompt("ingresa la Edad de " + nombre3 + ":"));
+
+const edadMayor = Math.max(edad1, edad2, edad3);
+
+if (isNaN(edad1) || isNaN(edad2) || isNaN(edad3) || edad1 <= 0 || edad1 <= 0 || edad2 <= 0 || edad3 <= 0) {
+  alert("debes ingresar edades VALIDAS (numeros mayores a cero).");
+} else {
+  let nombreMayor;
+
+   if (edadMayor === edad1) {
+    nombreMayor = nombre1;
+  } else if (edadMayor === edad2) {
+    nombreMayor = nombre2;
+  } else {
+    nombreMayor = nombre3;
+  }
+
+  // Mostramos el resultado
+  alert("✅ La persona mayor es: " + nombreMayor + " con " + edadMayor + " años.");
+  document.write("<h3>✅ La persona mayor es: <strong>" + nombreMayor + "</strong> (" + edadMayor + " años)</h3>");
+} */

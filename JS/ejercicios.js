@@ -257,7 +257,7 @@ if (texto === null || texto.trim() === "") {
   //ejercicio 14
 
   // Pedimos la cadena de texto al usuario
-let cadena = prompt("Ingresa un texto:");
+/* let cadena = prompt("Ingresa un texto:");
 
 // Validación: que no esté vacío
 if (!cadena || cadena.trim() === "") {
@@ -279,4 +279,32 @@ if (!cadena || cadena.trim() === "") {
   alert("Resultado:\n" + resultado);
   document.write("<h3>Resultado:</h3>");
   document.write("<p style='font-size:18px;'>" + resultado + "</p>");
+} */
+
+  //ejercicio 15
+
+  // Pedimos el texto al usuario
+let texto = prompt("Ingresa un texto para contar sus vocales:");
+
+// Validación
+if (!texto || texto.trim() === "") {
+  alert("⚠️ No ingresaste ningún texto.");
+} else {
+  // Convertimos todo a minúsculas para simplificar la comparación
+  let minusculas = texto.toLowerCase();
+  let contador = 0;
+
+  // Recorremos cada carácter del texto
+  for (let i = 0; i < minusculas.length; i++) {
+    let letra = minusculas[i];
+
+    // Comprobamos si es una vocal
+    if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
+      contador++;
+    }
+  }
+
+  // Mostramos el resultado
+  alert(`El texto tiene ${contador} vocal(es).`);
+  document.write(`<h3>Total de vocales: <strong>${contador}</strong></h3>`);
 }

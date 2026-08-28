@@ -225,3 +225,13 @@ if (isNaN(edad1) || isNaN(edad2) || isNaN(edad3) || edad1 <= 0 || edad1 <= 0 || 
   alert("✅ La persona mayor es: " + nombreMayor + " con " + edadMayor + " años.");
   document.write("<h3>✅ La persona mayor es: <strong>" + nombreMayor + "</strong> (" + edadMayor + " años)</h3>");
 } */
+ 
+  //ejercicio 11
+
+  // Generamos un número aleatorio entre 1 y 99
+const numeroAleatorio = Math.floor(Math.random() * 99) + 1;
+
+// Mostramos el resultado
+console.log("Número aleatorio generado:", numeroAleatorio);
+alert("Número aleatorio: " + numeroAleatorio);
+document.write("<h3>Número aleatorio entre 1 y 99: " + numeroAleatorio + "</h3>");

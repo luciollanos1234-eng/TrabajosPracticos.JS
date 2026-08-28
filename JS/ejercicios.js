@@ -284,7 +284,7 @@ if (!cadena || cadena.trim() === "") {
   //ejercicio 15
 
   // Pedimos el texto al usuario
-let texto = prompt("Ingresa un texto para contar sus vocales:");
+/* let texto = prompt("Ingresa un texto para contar sus vocales:");
 
 // Validación
 if (!texto || texto.trim() === "") {
@@ -307,4 +307,26 @@ if (!texto || texto.trim() === "") {
   // Mostramos el resultado
   alert(`El texto tiene ${contador} vocal(es).`);
   document.write(`<h3>Total de vocales: <strong>${contador}</strong></h3>`);
+} */
+
+  //ejercicio 16
+
+  // Pedimos la cadena al usuario
+let texto = prompt("Ingresa un texto:");
+
+// Validación
+if (!texto || texto.trim() === "") {
+  alert("⚠️ No ingresaste ningún texto.");
+} else {
+  let textoAlReves = "";
+
+  // Recorremos desde el último carácter hasta el primero
+  for (let i = texto.length - 1; i >= 0; i--) {
+    textoAlReves += texto[i]; // Agregamos cada carácter en orden inverso
+  }
+
+  // Mostramos el resultado
+  alert("Texto al revés:\n" + textoAlReves);
+  document.write("<h3>Texto al revés:</h3>");
+  document.write("<p style='font-size:18px;'>" + textoAlReves + "</p>");
 }

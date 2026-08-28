@@ -312,7 +312,7 @@ if (!texto || texto.trim() === "") {
   //ejercicio 16
 
   // Pedimos la cadena al usuario
-let texto = prompt("Ingresa un texto:");
+/* let texto = prompt("Ingresa un texto:");
 
 // Validación
 if (!texto || texto.trim() === "") {
@@ -329,4 +329,40 @@ if (!texto || texto.trim() === "") {
   alert("Texto al revés:\n" + textoAlReves);
   document.write("<h3>Texto al revés:</h3>");
   document.write("<p style='font-size:18px;'>" + textoAlReves + "</p>");
+} */
+
+
+  //ejercicio 17
+
+  // Pedimos el texto al usuario
+let texto = prompt("Ingresa un texto:");
+
+// Validación
+if (!texto || texto.trim() === "") {
+  alert("⚠️ No ingresaste ningún texto.");
+} else {
+  // Convertimos a minúsculas para comparar sin importar mayúsculas
+  let minusculas = texto.toLowerCase();
+  let posicion = -1;
+  let vocalEncontrada = "";
+
+  // Recorremos cada carácter desde el principio
+  for (let i = 0; i < minusculas.length; i++) {
+    let letra = minusculas[i];
+
+    // Comprobamos si es una vocal
+    if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
+      posicion = i; // Guardamos la posición (empieza en 0)
+      vocalEncontrada = letra;
+      break; // ✅ Salimos del bucle al encontrar la PRIMERA
+    }
+  }
+
+  // Mostramos el resultado
+  if (posicion === -1) {
+    alert("❌ No se encontró ninguna vocal en el texto.");
+  } else {
+    alert(`La vocal '${vocalEncontrada}' está en la posición ${posicion}`);
+    document.write(`<h3>La vocal '${vocalEncontrada}' está en la posición <strong>${posicion}</strong></h3>`);
+  }
 }

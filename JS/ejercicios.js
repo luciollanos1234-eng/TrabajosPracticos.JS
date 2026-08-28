@@ -229,9 +229,27 @@ if (isNaN(edad1) || isNaN(edad2) || isNaN(edad3) || edad1 <= 0 || edad1 <= 0 || 
   //ejercicio 11
 
   // Generamos un número aleatorio entre 1 y 99
-const numeroAleatorio = Math.floor(Math.random() * 99) + 1;
+/* const numeroAleatorio = Math.floor(Math.random() * 99) + 1;
 
 // Mostramos el resultado
 console.log("Número aleatorio generado:", numeroAleatorio);
 alert("Número aleatorio: " + numeroAleatorio);
-document.write("<h3>Número aleatorio entre 1 y 99: " + numeroAleatorio + "</h3>");
+document.write("<h3>Número aleatorio entre 1 y 99: " + numeroAleatorio + "</h3>"); */
+
+//ejercicio 13
+
+// Pedimos el texto al usuario
+let texto = prompt("Ingresa un texto cualquiera:");
+
+// Verificamos que no esté vacío
+if (texto === null || texto.trim() === "") {
+  alert("⚠️ No ingresaste ningún texto.");
+} else {
+  // Convertimos a mayúsculas con toUpperCase()
+  let textoMayusculas = texto.toUpperCase();
+
+  // Mostramos el resultado
+  alert("Texto en mayúsculas:\n" + textoMayusculas);
+  document.write("<h3>Texto en mayúsculas:</h3>");
+  document.write("<p style='font-size:18px; color:blue;'>" + textoMayusculas + "</p>");
+}

@@ -121,7 +121,7 @@ while (true) {
 //ejercicio 8
 
 // Pedimos al usuario que ingrese un número
-let numeroUsuario = prompt("Ingresa un número (máximo 50):");
+/* let numeroUsuario = prompt("Ingresa un número (máximo 50):");
 numeroUsuario = parseInt(numeroUsuario);
 
 // Validación: número entre 1 y 50
@@ -136,5 +136,32 @@ if (isNaN(numeroUsuario) || numeroUsuario < 1 || numeroUsuario > 50) {
     }
     console.log(linea); // Muestra en consola
     document.write(linea + "<br>"); // Muestra en página web
+  }
+} */
+
+  //ejercicio 9
+
+  // Recorremos los números del 1 al 500
+for (let numero = 1; numero <= 500; numero++) {
+  let mensaje = numero;
+
+  // Verificamos si es múltiplo de 4 y/o de 9
+  const esMultiplo4 = numero % 4 === 0;
+  const esMultiplo9 = numero % 9 === 0;
+
+  if (esMultiplo4 && esMultiplo9) {
+    mensaje += " (Múltiplo de 4 y de 9)";
+  } else if (esMultiplo4) {
+    mensaje += " (Múltiplo de 4)";
+  } else if (esMultiplo9) {
+    mensaje += " (Múltiplo de 9)";
+  }
+
+  // Mostramos el número en consola
+  console.log(mensaje);
+
+  // Cada 5 números mostramos la línea horizontal
+  if (numero % 5 === 0) {
+    console.log("——————————————————————————————");
   }
 }
